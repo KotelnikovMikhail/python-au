@@ -20,7 +20,7 @@ class MyTestArrays1Case(unittest.TestCase):
         result=self.solution.sortedSquares(example)
         expected=[]
         self.assertEqual(expected, result)
-     def test_sortedSquaresEmpty(self):
+     def test_sortedSquares(self):
         example=[-9,-4,-2,1,3,7]
         result=self.solution.sortedSquares(example)
         expected=[1,4,9,16,49,81]
