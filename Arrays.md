@@ -16,18 +16,23 @@ from Scratch import Solution
 
 class MyTestArrays1Case(unittest.TestCase):
     def test_sortedSquaresEmpty(self):
-        a=[]
-        result=self.solution.sortedSquares(a)
+        example=[]
+        result=self.solution.sortedSquares(example)
         expected=[]
-        self.assertEqual(expected, result) # add assertion here
+        self.assertEqual(expected, result)
+     def test_sortedSquaresEmpty(self):
+        example=[-9,-4,-2,1,3,7]
+        result=self.solution.sortedSquares(example)
+        expected=[1,4,9,16,49,81]
+        self.assertEqual(expected, result)
     def test_sortedSuaresPositive(self):
-        a = [1,2,3,4,7,9]
-        result = self.solution.sortedSquares(a)
+        example = [1,2,3,4,7,9]
+        result = self.solution.sortedSquares(example)
         expected = [1,4,9,16,49,81]
         self.assertEqual(expected, result)
     def test_sortedSuaresNegative(self):
-        a = [-9,-7,-4,-3,-2,-1]
-        result = self.solution.sortedSquares(a)
+        example = [-9,-7,-4,-3,-2,-1]
+        result = self.solution.sortedSquares(example)
         expected = [1,4,9,16,49,81]
         self.assertEqual(expected, result)
     def setUp(self):
